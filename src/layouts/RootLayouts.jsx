@@ -31,10 +31,10 @@ const RootLayouts = () => {
   const isPageLoading = navigation.state === "loading";
 
   return (
-    <div className="bg-[#05070a] min-h-screen text-white flex flex-col justify-between pt-20">
+    <div className=" min-h-screen  flex flex-col justify-between pt-20">
       <Navbar />
 
-      <main className="flex-grow w-full">
+      <main className="flex-grow w-full ">
         {isPageLoading ? (
           <PageLoader />
         ) : (

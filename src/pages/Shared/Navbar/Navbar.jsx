@@ -4,15 +4,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f1319]/70 backdrop-blur-md border-b border-gray-900/80 text-white font-sans transition-all duration-300">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-background backdrop-blur-md border-b border-gray-900/80 text-white font-sans transition-all duration-300">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between relative">
         {/* BACKGROUND GLOW EFFECT (Matching with Footer) */}
         <div className="absolute top-0 left-10 w-48 h-10 bg-blue-500/10 rounded-full blur-[40px] pointer-events-none" />
 
         {/* BRAND LOGO SECTION (Same as Footer) */}
-        <div className="flex items-center gap-3 group cursor-pointer relative z-10">
+        <div className="flex items-center gap-3 group cursor-pointer relative z-10 ">
           {/* card S icon */}
-          <div className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-gray-800 shadow-[0_4px_15px_rgba(0,0,0,0.4)] overflow-hidden group-hover:border-blue-500/50 transition-all duration-500">
+          <div className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-secondary border border-gray-800 shadow-[0_4px_15px_rgba(0,0,0,0.4)] overflow-hidden group-hover:border-blue-500/50 transition-all duration-500">
             {/* Bg glow color */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-500" />
             {/* S */}
@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
 
         {/* DESKTOP NAV LINKS (Hidden on Mobile) */}
-        <div className="hidden md:flex items-center space-x-8 text-[14px] font-medium text-gray-300">
+        <div className="hidden md:flex items-center space-x-8 text-[14px] font-medium text-base-content">
           {["Home", "Deliveries", "Categories", "Contact", "About Us"].map(
             (item, idx) => (
               <a
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         {/* DESKTOP CALL TO ACTION BUTTON */}
         <div className="hidden md:flex items-center">
-          <button className="h-10 bg-white text-black font-semibold px-5 text-xs rounded-xl hover:bg-gray-200 hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-[0_4px_15px_rgba(255,255,255,0.1)]">
+          <button className="h-10 bg-white border-1 text-black font-semibold px-5 text-xs rounded-xl hover:bg-gray-200 hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-[0_4px_15px_rgba(255,255,255,0.1)]">
             Track Order
           </button>
         </div>
